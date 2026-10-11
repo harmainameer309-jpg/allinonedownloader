@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c16"/>
+      <stop offset="50%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <!-- Spectrum Ring for all platforms (YouTube Red, TikTok Cyan, FB Blue, IG Pink, Pinterest) -->
+    <linearGradient id="spectrumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="25%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#1877f2"/>
+      <stop offset="75%" stop-color="#e1306c"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <!-- Neon Arrow Gradient -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="60%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="ringGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Container -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Border with Spectrum Gradient -->
+  <rect x="3" y="3" width="506" height="506" rx="117" fill="none" stroke="url(#spectrumGrad)" stroke-width="6" stroke-opacity="0.6"/>
+
+  <!-- Glowing Ambient Sphere in Center -->
+  <circle cx="256" cy="245" r="160" fill="url(#spectrumGrad)" opacity="0.12" filter="url(#softGlow)"/>
+
+  <!-- Surrounding Geometric Infinity Stream Ring -->
+  <circle cx="256" cy="245" r="148" fill="none" stroke="url(#spectrumGrad)" stroke-width="7" stroke-dasharray="16 8" opacity="0.85" filter="url(#ringGlow)"/>
+
+  <!-- Inner Concentric Orbit -->
+  <circle cx="256" cy="245" r="122" fill="#0b1120" stroke="#1e293b" stroke-width="4"/>
+
+  <!-- Central Download Arrow & Play Icon Hybrid Symbol -->
+  <g transform="translate(256, 245)">
+    <!-- Base Tray Curved Arc -->
+    <path d="M -80 40 L -80 72 C -80 86 -68 98 -52 98 L 52 98 C 68 98 80 86 80 72 L 80 40" 
+          fill="none" 
+          stroke="url(#spectrumGrad)" 
+          stroke-width="16" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Central Stream Downward Arrow -->
+    <path d="M 0 -85 L 0 52" 
+          fill="none" 
+          stroke="url(#arrowGrad)" 
+          stroke-width="18" 
+          stroke-linecap="round"/>
+
+    <!-- Arrow Head -->
+    <path d="M -48 10 L 0 56 L 48 10" 
+          fill="none" 
+          stroke="url(#arrowGrad)" 
+          stroke-width="18" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Play Wedge Accent Inside -->
+    <path d="M -16 -45 L 20 -28 L -16 -11 Z" 
+          fill="#ffffff" 
+          opacity="0.95"/>
+  </g>
+
+  <!-- Platform Accent Dots orbiting -->
+  <!-- YouTube Red Dot -->
+  <circle cx="160" cy="118" r="9" fill="#ef4444" filter="url(#ringGlow)"/>
+  <!-- TikTok Cyan Dot -->
+  <circle cx="352" cy="118" r="9" fill="#06b6d4" filter="url(#ringGlow)"/>
+  <!-- Facebook Blue Dot -->
+  <circle cx="400" cy="245" r="9" fill="#1877f2" filter="url(#ringGlow)"/>
+  <!-- Instagram Rose Dot -->
+  <circle cx="340" cy="370" r="9" fill="#e1306c" filter="url(#ringGlow)"/>
+  <!-- X/Twitter Chrome Dot -->
+  <circle cx="172" cy="370" r="9" fill="#38bdf8" filter="url(#ringGlow)"/>
+  <!-- Pinterest Crimson Dot -->
+  <circle cx="112" cy="245" r="9" fill="#dc2626" filter="url(#ringGlow)"/>
+
+  <!-- Bottom Brand Ribbon Badge: OMNISTREAM -->
+  <rect x="146" y="420" width="220" height="42" rx="21" fill="#0f172a" stroke="url(#spectrumGrad)" stroke-width="2"/>
+  <text x="256" y="447" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-weight="900" 
+        font-size="17" 
+        fill="#ffffff" 
+        text-anchor="middle" 
+        letter-spacing="4">OMNISTREAM</text>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "ClipStream, TokHD & FBDown - Unified Video Downloader",
+  "description": "Fast YouTube, TikTok and Facebook Video & Reel downloader without watermarks by Harmain Ameer. Features 1080p Full HD MP4, 320kbps MP3 audio, batch ZIP studio, and merged user data across all platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
